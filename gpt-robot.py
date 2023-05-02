@@ -1,7 +1,9 @@
 import openai
+import os
 
-# Set up the OpenAI API client
-openai.api_key = "you-gpt-api-token"
+# Set up the OpenAI API key
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
 
 # Set up the model and prompt
 model_engine = "text-davinci-003"
