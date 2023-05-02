@@ -7,6 +7,10 @@ const openai = new OpenAIApi(configuration);
 
 const completion = await openai.createCompletion({
   model: "text-davinci-003",
-  prompt: "Who will win the next eleciton in US?",
+  prompt: "能帮我详细解读阿德勒的课题分离吗?",
+  max_tokens: 1024,
+  n: 1,
+  stop: "None",
+  temperature: 0.5,
 });
 console.log(completion.data.choices[0].text);
